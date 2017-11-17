@@ -6,7 +6,7 @@ This sample shows how to leverage ADF to run an experiment.
 
 First, create compute targets for running the parameter sweep: DSVM and optionally, HDInsight Spark Cluster. Select **File**, **Open Command Prompt** and enter following commands to create the compute targets.
 
-Create DSVM. Attach it as compute target, and then prepare it by using:
+Create a Ubuntu baesd DSVM using [these instructions](https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro#create-your-data-science-virtual-machine-for-linux). Attach it as compute target, and then prepare it by using:
 
 ```bash
 $ az ml computetarget attach --name <dsvm> --address <dsvm-ip> --username <sshusername> --password <sshpwd> --type remotedocker
