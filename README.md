@@ -61,8 +61,8 @@ $ az ml experiment submit -c <myhdi> .\sweep_spark.py
     -projectDir "<gitProjectName>" `
     -subscriptionName "<azure subscription name>" `
     -dsvm "<dsvm>" `
-    -pythonPath ".\\sweep_spark.py" 
-```         `
+    -pythonPath ".\\sweep_spark.py"
+```
 
 ## On DSVM
 ### Update Azure PowerShell to >5.X
