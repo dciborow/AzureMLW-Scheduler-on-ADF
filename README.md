@@ -2,6 +2,9 @@
 
 This sample shows how to leverage ADF to run an experiment. 
 
+## Prerequisites
+-[Create Azure Machine Learning Preview accounts and install Azure Machine Learning Workbench](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation)
+
 ## Create Compute Targets
 
 First, create compute targets for running the parameter sweep: DSVM and optionally, HDInsight Spark Cluster. Select **File**, **Open Command Prompt** and enter following commands to create the compute targets.
