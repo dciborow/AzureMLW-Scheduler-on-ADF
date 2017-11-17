@@ -59,5 +59,6 @@ $ az ml experiment submit -c <myhdi> .\sweep_spark.py
 1. `cd User\{username}\Downloads
 1. AML.msi
 
-### Log into AMLW
+### Log into AML Workbench 
+1. This is required to create starter folders, remote experiment submission will fail if this is not complete.
 
