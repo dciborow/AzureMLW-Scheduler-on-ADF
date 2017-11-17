@@ -29,7 +29,7 @@ $ az ml experiment prepare -c <myhdi>
 ```
 
 
-## Run the Model
+## Run the Model from Local Machine
 
 **Note**: To run sweep_spark.py, you must select DSVM or HDInsight Spark cluster as compute target. The sweep_sklearn.py can run on local Python also.
 
@@ -46,6 +46,23 @@ HDInsight Spark run using spark-sklearn:
 $ az ml experiment submit -c <myhdi> .\sweep_spark.py
 ```
 
+## Deploy ADFv2 and other required resources
+```
+.\IaC\CreateDeployment.ps1 `
+    -prefix "<resource prefix>" `
+    -unique "<prefix suffix for uniqueness>" `
+    -Location "<region>" `
+    -sourceBlobPath "<source data location>" `
+    -sinkBlobPath "<sink data location>" `
+    -gitUser "<gitUserName>" `
+    -gitPassword "<gitAccessKey>" `
+    -vstsServer "<vsts server XXX.visualstudio.com>" `
+    -vstsAccount "<vsts account server.visualstudio.com/DefaultCollection/XXX>" `
+    -projectDir "<gitProjectName>" `
+    -subscriptionName "<azure subscription name>" `
+    -dsvm "<dsvm>" `
+    -pythonPath ".\\sweep_spark.py" 
+```         `
 
 ## On DSVM
 ### Update Azure PowerShell to >5.X
