@@ -9,7 +9,7 @@ First, create compute targets for running the parameter sweep: DSVM and optional
 Create DSVM. Attach it as compute target, and then prepare it by using:
 
 ```bash
-$ az ml computetarget attach --name <dsvm> --address <myhdi-ssh.azurehdinsight.net> --username <sshusername> --password <sshpwd> --type remotedocker
+$ az ml computetarget attach --name <dsvm> --address <dsvm-ip> --username <sshusername> --password <sshpwd> --type remotedocker
 ```
 
 ```bash
@@ -33,16 +33,11 @@ $ az ml experiment prepare -c <myhdi>
 
 **Note**: To run sweep_spark.py, you must select DSVM or HDInsight Spark cluster as compute target. The sweep_sklearn.py can run on local Python also.
 
-Local run using scikit-learn:
+
+DSVM run using spark-sklearn
 
 ```bash
-$ az ml experiment submit -c local .\sweep_sklearn.py
-```
-
-Docker run using spark-sklearn
-
-```bash
-$ az ml experiment submit -c docker .\sweep_spark.py
+$ az ml experiment submit -c <dsvm> .\sweep_spark.py
 ```
 
 HDInsight Spark run using spark-sklearn:
