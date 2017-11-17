@@ -40,13 +40,13 @@ $ az ml experiment prepare -c <myhdi>
 DSVM run using spark-sklearn
 
 ```bash
-$ az ml experiment submit -c <dsvm> .\sweep_spark.py
+$ az ml experiment submit -c <dsvm> <pyspark.py>
 ```
 
 HDInsight Spark run using spark-sklearn:
 
 ```bash
-$ az ml experiment submit -c <myhdi> .\sweep_spark.py
+$ az ml experiment submit -c <myhdi> <pyspark.py>
 ```
 
 ## Deploy ADFv2 and other required resources
@@ -80,7 +80,7 @@ $ az ml experiment submit -c <myhdi> .\sweep_spark.py
     -projectDir "<gitProjectName>" `
     -subscriptionName "<azure subscription name>" `
     -dsvm "<dsvm>" `
-    -pythonPath ".\\sweep_spark.py"
+    -pythonPath "<pyspark.py>"
 ```
 
 ## On Batch Windows DSVM Image
