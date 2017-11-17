@@ -80,7 +80,9 @@ $ az ml experiment submit -c <myhdi> .\sweep_spark.py
     -pythonPath ".\\sweep_spark.py"
 ```
 
-## On DSVM
+## On Batch Windows DSVM Image
+### RDP into Node using username `rdpuser`, and provided password. 
+
 ### Update Azure PowerShell to >5.X
 1. microsoft web platform installer is on the desktop of DSVM, use this to update Powershell
 
